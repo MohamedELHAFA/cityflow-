@@ -1,10 +1,31 @@
 # CityFlow — Pipeline de données trafic routier parisien
 
+**Étudiants :** Mohamed EL HAFA · Mohamed Adam Geulai · Saphir Lankri  
+**Date :** 27 mars 2026
+
 Pipeline local de gouvernance des données reproduisant une architecture AWS
 (EventBridge → Lambda → S3 → DynamoDB → API Gateway → Streamlit) avec des
 outils Python standards : pandas, SQLite, FastAPI, Streamlit.
 
 **Source :** [Paris Open Data — Comptages routiers permanents](https://opendata.paris.fr/explore/dataset/comptages-routiers-permanents)
+
+---
+
+## Contenu du livrable
+
+| Fichier / Dossier | Description |
+|---|---|
+| [`livrable/01_analyse_existant.md`](livrable/01_analyse_existant.md) | Analyse des limites du projet initial |
+| [`livrable/02_plan_gouvernance.md`](livrable/02_plan_gouvernance.md) | Plan de gouvernance (qualité, sécurité, traçabilité) |
+| [`livrable/03_dictionnaire_donnees.md`](livrable/03_dictionnaire_donnees.md) | Dictionnaire complet des données |
+| [`livrable/04_justification_technique.md`](livrable/04_justification_technique.md) | Justification des choix techniques |
+| [`schema architecture.html`](schema%20architecture.html) | Schéma d'architecture (ouvrir dans un navigateur) |
+| `scripts/` | Pipeline complet : fetch → process → load → aggregate |
+| [`api/local_api.py`](api/local_api.py) | API REST avec contrôle d'accès RBAC (public / viewer / admin) |
+| `tests/` | Tests unitaires |
+| [`.env.example`](.env.example) | Template de configuration (secrets non committés) |
+
+Pour lancer le projet en local, les instructions complètes sont dans la section [Installation](#installation) ci-dessous.
 
 ---
 
